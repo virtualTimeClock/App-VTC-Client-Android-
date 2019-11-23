@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_rapport"
+        android:enabled="true"
+        android:icon="@drawable/ic_rapport"
+        android:title="@string/bottom_navigation_menu_Rapport"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_photo"
+        android:enabled="true"
+        android:icon="@drawable/ic_photo"
+        android:title="@string/bottom_navigation_menu_Photo"
+        app:showAsAction="ifRoom" />
+
+</menu>

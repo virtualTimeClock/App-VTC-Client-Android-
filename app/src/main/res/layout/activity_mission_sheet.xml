@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MissionSheetActivity"
+    android:background="#333333">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fond_ecran_menu_mission"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/picture_title_mission"
+        android:layout_width="match_parent"
+        android:layout_height="169dp"
+        android:alpha="0.8"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fond_ecran_fiche_mission"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/titre_mission"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_title_missionsheet"
+        android:maxWidth="300dp"
+        android:maxHeight="150dp"
+        android:maxLines="8"
+        android:fontFamily="@font/cousine"
+        android:gravity="center_vertical"
+        android:text="Hello World! Hello World! Hello World!"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lieu_mission"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/lieu_mission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/cousine"
+        android:gravity="center_vertical"
+        android:text="Hello World!"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/picture_title_mission" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lieu_mission">
+
+        <TextView
+            android:id="@+id/description_mission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cousine"
+            android:text="Hello World!"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/text_pointage"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/cousine"
+        android:text="Pointez ici !"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pointing_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/picture_button_pointing"
+        android:onClick="onClick"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_pointage" />
+
+    <Button
+        android:id="@+id/report_button"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:background="@drawable/roundedbutton_mission_sheet"
+        android:text="Rapport"
+        android:onClick="onClick"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_pointage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

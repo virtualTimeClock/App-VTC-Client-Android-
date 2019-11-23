@@ -2,5 +2,14 @@
     <string name="app_name">Virtual Time Clock - Client</string>
     <string name="hint_email"> Email </string>
     <string name="hint_password"> Password </string>
-    <string name="sign_in"> Log in </string>
+    <string name="sign_in"> Connexion </string>
+    <string name="app">Virtual Time Clock</string>
+    <string name="load_img_failed">Fail to load image</string>
+    <!-- BOTTOM NAVIGATION VIEW -->
+    <string name="bottom_navigation_menu_Rapport">Rapport</string>
+    <string name="bottom_navigation_menu_Photo">Photo</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
