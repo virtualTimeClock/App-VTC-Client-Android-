@@ -25,6 +25,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".BottomNavigationActivityRepport"
+            android:label="@string/title_activity_bottom_navigation_repport"></activity>
         <activity android:name=".PictureRepportActivity" />
         <activity android:name=".RepportActivity" />
         <activity android:name=".StartingActivity" />

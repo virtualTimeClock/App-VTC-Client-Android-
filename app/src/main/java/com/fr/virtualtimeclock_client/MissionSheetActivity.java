@@ -110,7 +110,7 @@ public class MissionSheetActivity extends AppCompatActivity implements View.OnCl
         int i = v.getId();
         if (i == R.id.report_button) {
             //Toast.makeText(MissionSheetActivity.this, "Clique", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(MissionSheetActivity.this, RepportActivity.class);
+            Intent intent = new Intent(MissionSheetActivity.this, BottomNavigationActivityRepport.class);
             intent.putExtra("Identifiant_mission", identifiant_mission);
             startActivity(intent);
         }
