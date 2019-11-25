@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.renderscript.Script;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.GeoPoint;
 import com.google.firebase.firestore.Query;
 
 public class MissionManagerActivity extends AppCompatActivity {
@@ -64,16 +66,23 @@ public class MissionManagerActivity extends AppCompatActivity {
         cell.setOnClickListener(new MissionCell.OnItemClickListener() {
             @Override
             public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
-
                 //String path = documentSnapshot.getReference().getPath();
                 //Toast.makeText(MissionManagerActivity.this, "Position: " + position+ " ID: "+id, Toast.LENGTH_SHORT).show();
                 Mission mission = documentSnapshot.toObject(Mission.class);
+
                 Intent MissionSheetActivity = new Intent(MissionManagerActivity.this, MissionSheetActivity.class);
                 assert mission != null;
                 MissionSheetActivity.putExtra("Identifiant_mission", documentSnapshot.getId());
                 MissionSheetActivity.putExtra("Titre", mission.getTitre());
                 MissionSheetActivity.putExtra("Lieu", mission.getLieu());
                 MissionSheetActivity.putExtra("Description", mission.getDescription());
+
+                Double latitude = mission.getLocalisation().getLatitude();
+                Double longitude = mission.getLocalisation().getLongitude();
+
+                MissionSheetActivity.putExtra("Latitude", latitude);
+                MissionSheetActivity.putExtra("Longitude", longitude);
+                MissionSheetActivity.putExtra("Rayon", mission.getRayon());
 
                 startActivity(MissionSheetActivity);
             }
